@@ -1,29 +1,29 @@
 module.exports = (sequelize, DataTypes) => {
     const Komik = sequelize.define('Komik', {
-        id : {
-            type : DataTypes.INTEGER,
-            primarykey: true,
-            autoIncremenet: true
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
 
-        judul : {
-            type : DataTypes.STRING,
-            allowNull : false
-        },
-        
-        penulis : {
-            data : DataTypes.STRING,
-            allowNull : false
+        judul: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
-        deskripsi : {
-            data : DataTypes.TEXT,
-            allowNull : false
+        penulis: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+
+        deskripsi: {
+            type: DataTypes.TEXT,
+            allowNull: false
         }
     }, {
-        tableName : 'komik', 
+        tableName: 'komik',
         timestamps: true,
-        freezeTableName: true 
+        freezeTableName: true
     });
     return Komik;
 }
